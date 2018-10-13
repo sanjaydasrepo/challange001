@@ -3,7 +3,6 @@ package com.seam.messages.pojo;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.JsonNode;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -63,6 +62,7 @@ public class Message {
 	public void setAttachmentIds(List<String> attachmentIds) {
 		this.attachmentIds = attachmentIds;
 	}
+	//Added pattern for date
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss.SSSZ" , timezone="IST")
 	public Date getCreatedAt() {
 		return createdAt;

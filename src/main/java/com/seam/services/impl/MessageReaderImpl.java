@@ -54,6 +54,7 @@ public class MessageReaderImpl implements MessageReader {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+			return null;
 
 		}
 		return latestMessage;
@@ -104,6 +105,7 @@ public class MessageReaderImpl implements MessageReader {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+			return null;
 
 		}
 		return firstUnreadMessage;
