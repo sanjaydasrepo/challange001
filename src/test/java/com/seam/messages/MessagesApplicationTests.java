@@ -11,6 +11,7 @@ public class MessagesApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		
 	}
 
 }

@@ -77,14 +77,14 @@ public class MessageReaderImpl implements MessageReader {
 							// Convert the message node to the corresponding object
 							Message message = MapperUtils.getMapper().convertValue(messageNode, Message.class);
 							
+							//Get the jsonnode and convert it into map
 							String jsonString = message.getReadAt().toString();
 							Map<String, String> map = MapperUtils.getMapper().readValue(jsonString, new TypeReference<HashMap<String,String>>(){});
-							System.out.println("gagagaga "+jsonString + " vall "+map);
-						//	&& !msgReadTimestamp.equals("0")
-							//
+							String val = map.entrySet().stream().findFirst().get().getValue();
+							
 							
 							//Check if subscriberid is found and the message read timestamp as 0 
-							if( subscriberId.equals( message.getSenderId() ) ) {
+							if( subscriberId.equals( message.getSenderId() ) && "0".equals(val)) {
 								if (  createdDate == null) {
 									createdDate = message.getCreatedAt();
 									firstUnreadMessage = message ;

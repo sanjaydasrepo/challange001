@@ -23,6 +23,22 @@ public class Message {
     public Date createdAt;
 
     public JsonNode readAt; //Unread Message will have value as 0 and the key is the reciever id
+ 
+    
+    
+	public Message() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Message(String senderId, String body, List<String> attachmentIds, Date createdAt, JsonNode readAt) {
+		super();
+		this.senderId = senderId;
+		this.body = body;
+		this.attachmentIds = attachmentIds;
+		this.createdAt = createdAt;
+		this.readAt = readAt;
+	}
 
 	public String getSenderId() {
 		return senderId;
