@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
-@ComponentScan({"com.seam.messages","com.seam.pojo","com.seam.utils","com.seam.services"})
+@ComponentScan({"com.seam.messages","com.seam.services"})
 @EnableSwagger2
 public class MessagesApplication {
 
